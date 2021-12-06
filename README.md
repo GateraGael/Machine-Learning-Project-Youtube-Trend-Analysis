@@ -7,8 +7,28 @@ Image retrieved from: [Galaxy Marketing YouTube Stats](https://www.galaxymarketi
 
 # Table of contents
 1. [Introduction](#Introduction)
-    1. [Installation](#Installation)
+    1. [USA Dataset](#USA_dataset)
     2. [Test with Colab Notebook](#ColabNotebook)
+
+
+## Introduction <a name="Introduction"></a>
+This dataset was created using a webscraper that used the [Youtube Data API](https://developers.google.com/youtube/registering_an_application), which is now a part of Google Cloud Platform. The scraper itself can be found at the following link: https://github.com/mitchelljy/Trending-YouTube-Scraper. The dataset that is updated daily is at the following kaggle site [YouTube Trending Video Dataset (updated daily)](https://www.kaggle.com/rsrishav/youtube-trending-video-dataset).
+
+The scrapper can create useable data in the from '.csv' files for different countries. Every single dataset comes with a column called category_id which is different for every region (there are a total of five regions in the dataset) most likely corresponding to:
+1. Americas (North and South America)
+2. Europe
+3. Africa
+4. Asia
+5. Australia
+
+Each file comes with a 'JSON' file in which users can retrieve the corresponding caterogry id's. An example of a category is music. I'll initially start with creating models with just data from the United States. Then potentially test on data from other countries to see if the models are consitent.
+
+### USA Dataset<a name="USA_dataset"></a>
+
+
+### Test with Colab Notebook<a name="ColabNotebook"></a>
+
+
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
@@ -16,33 +36,6 @@ see how to make table of contents in markdown: https://stackoverflow.com/questio
     1. [Sub paragraph](#subparagraph1)
 3. [Another paragraph](#paragraph2)
 -->
-
-## Introduction <a name="introduction"></a>
-
-In this repository, I will be Experimenting with Google Research Football Environment.
-Football has been a passion of mine since I can remember, it is fantastic that I can use a passion of mine to continue learning about my field of study.
-
-Having had the chance to actually play the sport at a semi-professional level maybe I can provide some unprecedented insight and help train the models.
-
-Created a function that takes screenshots from that used pyautogui's _.screenshot_
-Full Doc at Link: [pyautogui-screenshot function](https://pyautogui.readthedocs.io/en/latest/screenshot.html)
-
-Published paper linked here: [Google Research Football: A Novel Reinforcement Learning Environment](https://arxiv.org/pdf/1907.11180.pdf).
-
-
-### Installation <a name="Installation"></a>
-After struggling with the different installation instructions. The docker image with gpu support and tensorflow base was by far the best and that actually rendered the game.
-
-
-**Instructions on how to install with docker linked here:** [Google Research Football Docker Image](https://github.com/google-research/football/blob/master/gfootball/doc/docker.md).
-
-
-[My Own Installations hyperlinked here](./Installation.md)
-
-### Test with Colab Notebook<a name="ColabNotebook"></a>
-
-Using the following link: [Tutorial Colab Notebook!](https://colab.research.google.com/github/google-research/football/blob/master/gfootball/colabs/gfootball_example_from_prebuild.ipynb) 
-Honnestly does not teach much. Not sure it was inteded to teach anything or simply as a quickstart. Created a directory titled "ColabTutorial" where I will be running the above notebook as .py files. Please refer to the readme file titled "Colab_summary.md" hyperlinked: [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) in which I basically logged all my trials.
 
 <!--
 ## Some paragraph <a name="paragraph1"></a>
@@ -57,19 +50,6 @@ The second paragraph text
 -->
 
 
-# December 24th 2020
-On Decmber 23rd, I ran different trials with the given started tutorial notebook to get a reward, some of them had a reward, while some other did not.
-Therefore wanted to get a more thorough understanding of what was going on in the background.
-
-Please see folder [Colab_summary](https://github.com/GateraGael/Google-Research-Football-Environment-Experiment/blob/main/ColabTutorial/colab_summary.md) file for an overview of my trials.
-
-Also have been refering to the the actual paper in order to get better insight into the environments, variables and actions the agents take.
-
-Page 4 of the resarch paper explains that the football engine rewards the team or agent when a goal is scored (+1) and rewards a (-1) when a goal is scored against. Therefore only my Trial #2 successfully scored a goal while all the other attemps had the ball taken away.
-At Trial #10 I was able to make our agent Alan Turing dribble directly into the goal.
-Unfortunately no A.I. yet, simply needed to do this to get an understanding of the football engine.
-
-![](ColabTutorial/trial10_logs/screenshots/00m40s.png)
 
 
 
