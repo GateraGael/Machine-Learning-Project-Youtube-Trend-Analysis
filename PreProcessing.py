@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import numpy as np
 
-us_data_file = 'Data/US_data.csv'
+us_data_file = '../Data/US_data.csv'
 
 
 def get_category_id_df(json_file_path):
@@ -30,10 +30,6 @@ def get_category_id_df(json_file_path):
 def make_dataframe(path_of_csv, path_of_json):
     all_ids = get_category_id_df(path_of_json)
     original_df = pd.read_csv(path_of_csv)
-
-    print(original_df.shape)
-
-    sys.exit()
 
     original_df["category"] = original_df.categoryId.apply(lambda x: all_ids[x] if x in all_ids else "Unknown")
 
@@ -70,9 +66,10 @@ def correlation(dataframe):
 
 if __name__ == '__main__':
 
-    us_dataframe = make_dataframe(us_data_file, 'Data/US_category_id.json')
+    us_dataframe = make_dataframe(us_data_file, '../Data/US_category_id.json')
 
-    print(us_dataframe.info())
+    print(list(us_dataframe['categoryId'][:5]))
+    print(list(us_dataframe['category'][:5]))
     # print(get_unique_value_stats(us_dataframe, 'video_id'))
 
     # test_df = us_dataframe.groupby('video_id').get_group('hdmx71UjBXs')

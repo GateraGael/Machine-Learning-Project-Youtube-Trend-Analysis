@@ -25,9 +25,11 @@ Each file comes with a 'JSON' file in which users can retrieve the corresponding
 
 ### USA Dataset<a name="USA_dataset"></a>
 
-
-### Test with Colab Notebook<a name="ColabNotebook"></a>
-
+The csv file has 95391 rows and 16 columns. The category id's json file creates an additional column. I then created the following:
+* 'category' descriptive qualitative representations of the 'categoryId'
+* 'trending_date_dt' python datetime version of the 'trending date'
+* 'published_date' python datetime version of the 'publishedAt'
+* 'time_till_trending' python datetime version of the 'trending_date_dt'
 
 <!--
 see how to make table of contents in markdown: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
@@ -46,7 +48,6 @@ This is a sub paragraph, formatted in heading 3 style
 
 ## Another paragraph <a name="paragraph2"></a>
 The second paragraph text
-
 -->
 
 
